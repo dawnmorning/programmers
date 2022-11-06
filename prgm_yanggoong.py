@@ -21,4 +21,6 @@ def solution(n, info):
             return [-1]
         else:
             return answer[:-1]
-
+# from itertools import combinations_with_replacement
+# for i in combinations_with_replacement(range(11),5):
+#     print(i)
