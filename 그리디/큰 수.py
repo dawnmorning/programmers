@@ -10,4 +10,5 @@ def solution(number, k):
         temp.append(i)
     # 있는 숫자들 합치기
     answer = ''.join(temp[:len(temp) - k])
+    # print('수정 중')
     return answer
