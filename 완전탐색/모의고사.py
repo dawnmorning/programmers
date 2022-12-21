@@ -1,4 +1,4 @@
-# from itertools import combinations
+# from itertools import permutations
 #
 # def solution(answers):
 #     student1 = []
