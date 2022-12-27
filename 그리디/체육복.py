@@ -1,8 +1,12 @@
 def solution(n,lost, reserve):
+#     n = 5
+# lost = [2, 4], reserve = [3, 1]
     reserve.sort()
     cnt = 0
     all_student = [1] * (n+1)
+    # 1번부터 셀거니깐 인덱스 0은 0으로 바꾸기
     all_student[0] = 0
+    # 여벌있는데 도난당한 경우 하나만 남음, 빌려줄 수 없으니 빼놓고 생각
     _lost = [l for l in lost if l not in reserve]
     for i in _lost:
         all_student[i] = 0
@@ -18,6 +22,3 @@ def solution(n,lost, reserve):
         if k == 1:
             cnt += 1
     return cnt
-
-
-print(solution(5,[2,4],[1,3,5]))
