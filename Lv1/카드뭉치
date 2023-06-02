@@ -1,0 +1,19 @@
+def solution(cards1, cards2, goal):
+    c1index = 0
+    c2index = 0
+    count = 0
+    while count < len(goal):
+        if goal[count] in cards1[c1index] :
+            c1index += 1
+            count += 1
+            continue
+        elif goal[count] in cards2[c2index] : 
+            c2index += 1
+            count += 1
+            continue
+        if goal[count] not in (cards1[c1index] or  cards2[c2index]):
+            return "No"
+    if count == len(goal):
+        return "Yes"
+    
+print(solution(["i", "water", "drink"],["want", "to"],["i", "want", "to", "drink", "water"]	))
